@@ -1,0 +1,32 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Dependency Inject - Products</h1>
+    
+    <div>
+        <h3 class="text-center">ASP.NET Core Dependency</h3>
+        <br/>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.id</td>
+                    <td>@product.name</td>
+                    <td>@product.price</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
